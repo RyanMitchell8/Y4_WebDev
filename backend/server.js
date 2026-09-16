@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static("public"));
 
 const notes = [
-  { id: 1, text: "Buy milk" },
+  { id: 1, text: "Buy 50 liters of milk" },
   { id: 2, text: "Finish the deployment tutorial" },
   { id: 3, text: "Water the plants" },
 ];
