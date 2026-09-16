@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const apiUrl = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
 
   useEffect(() => {
-    fetch("/api/notes")
+    fetch(`${apiUrl}/api/notes`)
       .then((res) => res.json())
       .then((data) => setNotes(data));
-  }, []);
+  }, [apiUrl]);
 
   return (
     <div>
